@@ -160,6 +160,10 @@ html, body, #root, .App {
 .MuiContainer-root {
   padding: 10px !important;
 }
+.link-projects{
+  color: inherit !important;
+  text-decoration: none;
+}
 /* Responsive Design */
 
 @media (max-width: 768px) {

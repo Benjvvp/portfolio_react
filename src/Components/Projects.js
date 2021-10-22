@@ -57,10 +57,25 @@ const Projects = () => {
             </CardContent>
             <CardActions sx={{ justifyContent: "center" }}>
               <Button size="small" color="primary">
-                View
+                <a
+                  href="https://todolist-react-perez.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='link-projects'
+                >
+                  View
+                </a>
               </Button>
+
               <Button size="small" color="primary">
-                Source
+                <a
+                  href="https://github.com/Benjvvp/portfolio_react"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='link-projects'
+                >
+                  Source
+                </a>
               </Button>
             </CardActions>
           </Card>
