@@ -1,38 +1,227 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap");
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+html, body, #root, .App {
+  width: 100%;
+  overflow-x: hidden;
+}
+.bottomBarAnimation::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #167b6f;
+  transition: width 0.3s;
+}
+.bottomBarAnimation:hover::after {
+  width: 100%;
+}
+.presentation_myname {
+  font-family: "Nunito", sans-serif !important;
+}
+.presentation_skill {
+  font-family: "Nunito", sans-serif !important;
+}
+.presentation_head {
+  background-color: #08cfb0;
+  display: inline-block;
+  border-radius: 30px 30px 30px 0;
+  padding: 0.5em;
+  width: 30%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.presentation_myimg {
+  border: 1.4em solid #101010;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MuiAvatar-root{
+  width: 400px !important;
+  height: 400px !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.presentation_iconurl {
+  border-radius: 10px;
   color: white;
+  padding: 5px;
+}
+.presentation_iconurl:hover {
+  background-color: rgb(255, 255, 255);
+  color: #08cfb0;
+  transition: all 0.5s;
+}
+/* Skill Section */
+.skills_img {
+  width: 100%;
+}
+.skills_skill {
+  width: auto !important;
+  min-width: 10%;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #08cfb0;
+  border-radius: 2px;
+  padding: 3px;
+  margin: 0.2em !important;
+}
+.skill_cv {
+  background-color: #08cfb0;
+  display: inline-block;
+  border-radius: 30px 30px 30px 30px;
+  padding: 0.5em;
+  width: 30%;
+  text-align: center;
+}
+.card i {
+  font-size: 400%;
+  opacity: 0.5;
+}
+.card:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover > i {
+  opacity: 1 !important;
+  transition: opacity 0.2s ease;
+}
+.MuiAvatar-img	{
+  width: 100%;
+  height: 100%;
+}
+/* Projects Section */
+.badges{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  font-family: Nunito;
+}
+.badge{
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  margin: 5px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.html5{
+  background-color: rgba(241, 101, 40, 0.5);
+}
+.css{
+  background-color: rgba(34, 153, 247, 0.5);
+}
+.js{
+  background-color: rgba(251, 214, 2, 0.5);
+}
+.nodejs{
+  background-color: rgba(139, 197, 0, 0.5);
+}
+.boostrap{
+  background-color: rgba(121, 82, 179, 0.5);
+}
+.react{
+  background-color: rgba(107, 217, 254, 0.5);
+}
+.git{
+  background-color: rgba(222, 76, 54, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+/* Contact Section */
+.input_contact{
+  background-color: #1010102d;
 }
+.input_contact .MuiFilledInput-root input{
+  color: white !important;
+}
+.button_contact{
+  background-color: #007967 !important;
+  height: calc(100% + 30%);
+}
+.input_contact .MuiFilledInput-root:hover:not(.Mui-disabled):before{
+  border-bottom-color: #007967 !important;
+}
+.input_contact .MuiFilledInput-root::before{
+  border-color: #007967;
+}
+.input_contact .MuiFilledInput-root::after{
+  border-color: #19b19f;
+}
+.input_contact label{
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-weight: bold !important;
+}
+.MuiContainer-root {
+  padding: 10px !important;
+}
+/* Responsive Design */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .aboutmetext{
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .MuiAvatar-root{
+    align-items: center !important;
+    width: 260px !important;
+    height: 260px !important;
+  }
+  .MuiAvatar-img	{
+    width: 100%;
+    height: 100%;
+  }
+  .skill_cv{
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .imgFade{
+    display: none;
+  }
+  .aboutmetext{
+    text-align: center !important;
+  }
+  .gridphone {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .MuiAvatar-root{
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .MuiAvatar-img	{
+    width: 100%;
+    height: 100%;
+  }
+  .skill_cv{
+    width: 70%;
+  }
+  #Skills h3{
+    text-align: center;
+  }
+  .presentation_head{
+    width: 60%;
+  }
+}
+@media (max-width: 425px) {
+  #Presentation{
+    padding: 0;
+  }
+  #Presentation .MuiGrid-root{
+    text-align: center
+  }
+  #Presentation .MuiGrid-root .MuiGrid-item{
+    max-width: 80%;
+  }
+}
+@media (max-width: 325px){
+  .nav-text{
+    font-size: 70% !important;
   }
 }
